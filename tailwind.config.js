@@ -6,7 +6,11 @@ module.exports = {
         minHeight: {
             notInclueHeader: 'calc(100vh - 60px)',
         },
-        extend: {},
+        extend: {
+            colors: {
+                pink: '#F4ABC4',
+            },
+        },
     },
     plugins: [require('@tailwindcss/aspect-ratio')],
 };

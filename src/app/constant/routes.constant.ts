@@ -3,8 +3,8 @@ import ProfileComponent from '~/app/pages/profile/profile-component';
 import UploadComponent from '~/app/pages/upload/upload-component';
 import SearchComponent from '~/app/pages/search/search-component';
 import SettingsComponent from '~/app/pages/settings/settings-component';
-import { HeaderOnlyComponent } from '~/layout';
-import NotFound from '~/router/not-found';
+import {HeaderOnlyComponent} from '../layout';
+import NotFound from '../router/not-found';
 
 export const RoutesConstant = Object.freeze({
     // public routes

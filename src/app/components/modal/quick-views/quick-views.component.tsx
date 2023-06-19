@@ -1,19 +1,15 @@
-import { withTranslation } from 'react-i18next';
-import { QuickViewsProps } from './quick-view.props';
-import { Fragment, useState } from 'react';
-import { Dialog, RadioGroup, Transition } from '@headlessui/react';
-import { XMarkIcon } from '@heroicons/react/24/outline';
-import { StarIcon } from '@heroicons/react/20/solid';
+import {withTranslation} from 'react-i18next';
+import {QuickViewsProps} from './quick-view.props';
+import {Fragment, useState} from 'react';
+import {Dialog, RadioGroup, Transition} from '@headlessui/react';
+import {XMarkIcon} from '@heroicons/react/24/outline';
+import {StarIcon} from '@heroicons/react/20/solid';
 
-const classNames = (...classes) => {
-    return classes.filter(Boolean).join(' ');
-};
 
 const QuickViewComponent = (props: QuickViewsProps) => {
     const { isOpen, data } = props;
     const [open, setOpen] = useState(isOpen);
     const [selectedColor, setSelectedColor] = useState(data.colors[0]);
-    const [selectedSize, setSelectedSize] = useState(data.sizes[2]);
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ');
     }
@@ -121,7 +117,7 @@ const QuickViewComponent = (props: QuickViewsProps) => {
                                                                 Choose a color
                                                             </RadioGroup.Label>
                                                             <span className="flex items-center space-x-3">
-                                                                {data.colors?.map((color) => (
+                                                                {data.colors.map((color) => (
                                                                     <RadioGroup.Option
                                                                         key={color.name}
                                                                         value={color}
